@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B1A2B54-488A-4BEF-9F6F-C9D8282A627A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessLayer_FrameWork</RootNamespace>
+    <AssemblyName>BusinessLayer_FrameWork</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Facade\FacadeBusiness.cs" />
+    <Compile Include="Helper\DropFKClass.cs" />
+    <Compile Include="Interfaces\IFacadeBokningsregister.cs" />
+    <Compile Include="Interfaces\IFacadeButiksregister.cs" />
+    <Compile Include="Interfaces\IFacadeFakturaregister.cs" />
+    <Compile Include="Interfaces\IFacadeGruppskidlektion.cs" />
+    <Compile Include="Interfaces\IFacadeAnställd.cs" />
+    <Compile Include="Interfaces\IFacadeBokning.cs" />
+    <Compile Include="Interfaces\IFacadeBokningSkidlektion.cs" />
+    <Compile Include="Interfaces\IFacadeDeltagare.cs" />
+    <Compile Include="Interfaces\IFacadeFaktura.cs" />
+    <Compile Include="Interfaces\IFacadeFöretagsKund.cs" />
+    <Compile Include="Interfaces\IFacadeHyrpris.cs" />
+    <Compile Include="Interfaces\IFacadeKonferens.cs" />
+    <Compile Include="Interfaces\IFacadeKonferensPris.cs" />
+    <Compile Include="Interfaces\IFacadeKundregister.cs" />
+    <Compile Include="Interfaces\IFacadeLogi.cs" />
+    <Compile Include="Interfaces\IFacadeLogiBokning.cs" />
+    <Compile Include="Interfaces\IFacadeLogiPris.cs" />
+    <Compile Include="Interfaces\IFacadeMarknadsChef.cs" />
+    <Compile Include="Interfaces\IFacadePreBokning.cs" />
+    <Compile Include="Interfaces\IFacadePrivatKund.cs" />
+    <Compile Include="Interfaces\IFacadePrivatLektion.cs" />
+    <Compile Include="Interfaces\IFacadeSkidlektion.cs" />
+    <Compile Include="Interfaces\IFacadeSysAdmin.cs" />
+    <Compile Include="Interfaces\IFacadeTempKund.cs" />
+    <Compile Include="Interfaces\IFacadeUthyrning.cs" />
+    <Compile Include="Interfaces\IFacadeUthyrningsregister.cs" />
+    <Compile Include="Interfaces\IFacadeUtrustning.cs" />
+    <Compile Include="Models\FacadeAnställd.cs" />
+    <Compile Include="Models\FacadeBokning.cs" />
+    <Compile Include="Models\FacadeBokningSkidlektion.cs" />
+    <Compile Include="Models\FacadeBokningsregister.cs" />
+    <Compile Include="Models\FacadeButiksregister.cs" />
+    <Compile Include="Models\FacadeDeltagare.cs" />
+    <Compile Include="Models\FacadeFaktura.cs" />
+    <Compile Include="Models\FacadeFakturaregister.cs" />
+    <Compile Include="Models\FacadeFöretagskund.cs" />
+    <Compile Include="Models\FacadeHyrpris.cs" />
+    <Compile Include="Models\FacadeKonferens.cs" />
+    <Compile Include="Models\FacadeKonferensPris.cs" />
+    <Compile Include="Models\FacadeKundregister.cs" />
+    <Compile Include="Models\FacadeLogi.cs" />
+    <Compile Include="Models\FacadeLogiBokning.cs" />
+    <Compile Include="Models\FacadeLogiPris.cs" />
+    <Compile Include="Models\FacadeMarknadschef.cs" />
+    <Compile Include="Models\FacadePreBokning.cs" />
+    <Compile Include="Models\FacadePrivatKund.cs" />
+    <Compile Include="Models\FacadePrivatLektion.cs" />
+    <Compile Include="Models\FacadeSkidlektion.cs" />
+    <Compile Include="Models\FacadeSysAdmin.cs" />
+    <Compile Include="Models\FacadeTempKund.cs" />
+    <Compile Include="Models\FacadeUthyrning.cs" />
+    <Compile Include="Models\FacadeUthyrningsregister.cs" />
+    <Compile Include="Models\FacadeUtrustning.cs" />
+    <Compile Include="Models\FacadeGruppskidlektion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessEntities_FrameWork\BusinessEntities_FrameWork\BusinessEntities_FrameWork.csproj">
+      <Project>{e99d0d2a-bcbb-48aa-9f2b-eb62db609777}</Project>
+      <Name>BusinessEntities_FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer_FrameWork\DataLayer_FrameWork.csproj">
+      <Project>{1bb0d322-afa2-43d4-b647-1820370a9a96}</Project>
+      <Name>DataLayer_FrameWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

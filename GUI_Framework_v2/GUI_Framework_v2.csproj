@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA8F6580-1FE3-448D-A15E-24AFE2A58D98}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI_Framework_v2</RootNamespace>
+    <AssemblyName>GUI_Framework_v2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\BusinessEntities_FrameWork\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto.1.8.9.0.Fakes">
+      <HintPath>FakesAssemblies\BouncyCastle.Crypto.1.8.9.0.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto.Fakes">
+      <HintPath>FakesAssemblies\BouncyCastle.Crypto.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLayer_FrameWork.Fakes">
+      <HintPath>FakesAssemblies\DataLayer_FrameWork.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Fakes">
+      <HintPath>FakesAssemblies\EntityFramework.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelMapper, Version=5.0.0.0, Culture=neutral, PublicKeyToken=6c3f2bec99465df3, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\ExcelMapper.5.1.253\lib\net461\ExcelMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelMapper.Fakes">
+      <HintPath>FakesAssemblies\ExcelMapper.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.2.10, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\SharpZipLib.1.3.2\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.Fakes">
+      <HintPath>FakesAssemblies\itextsharp.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework.Fakes">
+      <HintPath>FakesAssemblies\Microsoft.AspNet.Identity.EntityFramework.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\NPOI.2.5.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.2.5.1.0.Fakes">
+      <HintPath>FakesAssemblies\NPOI.2.5.1.0.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\NPOI.2.5.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\NPOI.2.5.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\NPOI.2.5.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Spire.PDF.7.1.10\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=7.1.10.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Spire.PDF.7.1.10\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Text.Json.5.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BelStatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BelStatistik.Designer.cs">
+      <DependentUpon>BelStatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BelStatistikClass.cs" />
+    <Compile Include="BokaKonferensLogi.cs" />
+    <Compile Include="Boka\BokaCampingochPrivat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boka\BokaCampingochPrivat.Designer.cs">
+      <DependentUpon>BokaCampingochPrivat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boka\BokaPrivat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boka\BokaPrivat.Designer.cs">
+      <DependentUpon>BokaPrivat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boka\Bokningar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boka\Bokningar.Designer.cs">
+      <DependentUpon>Bokningar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boka\BokningarClass.cs" />
+    <Compile Include="Boka\frmUtskriftBokningsbekräftelse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boka\frmUtskriftBokningsbekräftelse.Designer.cs">
+      <DependentUpon>frmUtskriftBokningsbekräftelse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boka\Konferens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boka\Konferens.Designer.cs">
+      <DependentUpon>Konferens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boka\utskriftfaktura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boka\utskriftfaktura.Designer.cs">
+      <DependentUpon>utskriftfaktura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Butik\ButiksregisterClass.cs" />
+    <Compile Include="Butik\ButikSkidskolaPrivat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Butik\ButikSkidskolaPrivat.Designer.cs">
+      <DependentUpon>ButikSkidskolaPrivat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Butik\ButikSkiduthyrning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Butik\ButikSkiduthyrning.Designer.cs">
+      <DependentUpon>ButikSkiduthyrning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Butik\Butiksregister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Butik\Butiksregister.Designer.cs">
+      <DependentUpon>Butiksregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Butik\ButikÅterlämning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Butik\ButikÅterlämning.Designer.cs">
+      <DependentUpon>ButikÅterlämning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Butik\UtrustningClass.cs" />
+    <Compile Include="FakturaFörKöp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FakturaFörKöp.Designer.cs">
+      <DependentUpon>FakturaFörKöp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FakturaFörKöpClass.cs" />
+    <Compile Include="FakturaFörLogi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FakturaFörLogi.Designer.cs">
+      <DependentUpon>FakturaFörLogi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FakturaFörLogiClass.cs" />
+    <Compile Include="Fakturaregister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fakturaregister.Designer.cs">
+      <DependentUpon>Fakturaregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boka\frmBokning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boka\frmBokning.Designer.cs">
+      <DependentUpon>frmBokning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Butik\frmButikMeny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Butik\frmButikMeny.Designer.cs">
+      <DependentUpon>frmButikMeny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FakturaRegisterClass.cs" />
+    <Compile Include="frmGodkännaPreBokningar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGodkännaPreBokningar.Designer.cs">
+      <DependentUpon>frmGodkännaPreBokningar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGruppSkidlektion-v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGruppSkidlektion-v2.Designer.cs">
+      <DependentUpon>frmGruppSkidlektion-v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHyrpris_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHyrpris_2.Designer.cs">
+      <DependentUpon>frmHyrpris_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKonferensPris_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKonferensPris_2.Designer.cs">
+      <DependentUpon>frmKonferensPris_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin_2.Designer.cs">
+      <DependentUpon>frmLogin_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GodkännaPreBokningar.cs" />
+    <Compile Include="SysAdmin\frmUppdateraPrivatRabatt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysAdmin\frmUppdateraPrivatRabatt.Designer.cs">
+      <DependentUpon>frmUppdateraPrivatRabatt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FöretagsKundRegisterClass.cs" />
+    <Compile Include="MarknadsChef\frmLogipris_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarknadsChef\frmLogipris_2.Designer.cs">
+      <DependentUpon>frmLogipris_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarknadsChef\frmMarknadsmeny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarknadsChef\frmMarknadsmeny.Designer.cs">
+      <DependentUpon>frmMarknadsmeny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PdfKlass.cs" />
+    <Compile Include="PrivatKundRegisterClass.cs" />
+    <Compile Include="Skidskola\frmSkidlärare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skidskola\frmSkidlärare.Designer.cs">
+      <DependentUpon>frmSkidlärare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skidskola\privatskidskolaklass.cs" />
+    <Compile Include="Skidskola\SkidskolaKlass.cs" />
+    <Compile Include="suht2009DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SysAdmin\frmSysadminLäggTillPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysAdmin\frmSysadminLäggTillPersonal.Designer.cs">
+      <DependentUpon>frmSysadminLäggTillPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysAdmin\frmSysadminMeny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysAdmin\frmSysadminMeny.Designer.cs">
+      <DependentUpon>frmSysadminMeny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysAdmin\frmSysadminpersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysAdmin\frmSysadminpersonal.Designer.cs">
+      <DependentUpon>frmSysadminpersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hyrutrustningslista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hyrutrustningslista.Designer.cs">
+      <DependentUpon>Hyrutrustningslista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Konferenslista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konferenslista.Designer.cs">
+      <DependentUpon>Konferenslista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kundregister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kundregister.Designer.cs">
+      <DependentUpon>Kundregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logilista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logilista.Designer.cs">
+      <DependentUpon>Logilista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarknadsChef\LäggTillKundFöretag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarknadsChef\LäggTillKundFöretag.Designer.cs">
+      <DependentUpon>LäggTillKundFöretag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarknadsChef\LäggTillKundPrivat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarknadsChef\LäggTillKundPrivat.Designer.cs">
+      <DependentUpon>LäggTillKundPrivat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarknadsChef\Prislistor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarknadsChef\Prislistor.Designer.cs">
+      <DependentUpon>Prislistor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preliminärbokningar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preliminärbokningar.Designer.cs">
+      <DependentUpon>Preliminärbokningar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MarknadsChef\UppdateraKundFöretag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarknadsChef\UppdateraKundFöretag.Designer.cs">
+      <DependentUpon>UppdateraKundFöretag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarknadsChef\UppdateraKundPrivat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarknadsChef\UppdateraKundPrivat.Designer.cs">
+      <DependentUpon>UppdateraKundPrivat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uthyrningsregister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uthyrningsregister.Designer.cs">
+      <DependentUpon>Uthyrningsregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UthyrningsregisterClass.cs" />
+    <EmbeddedResource Include="BelStatistik.resx">
+      <DependentUpon>BelStatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boka\BokaCampingochPrivat.resx">
+      <DependentUpon>BokaCampingochPrivat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boka\BokaPrivat.resx">
+      <DependentUpon>BokaPrivat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boka\Bokningar.resx">
+      <DependentUpon>Bokningar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boka\frmUtskriftBokningsbekräftelse.resx">
+      <DependentUpon>frmUtskriftBokningsbekräftelse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boka\Konferens.resx">
+      <DependentUpon>Konferens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boka\utskriftfaktura.resx">
+      <DependentUpon>utskriftfaktura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Butik\ButikSkidskolaPrivat.resx">
+      <DependentUpon>ButikSkidskolaPrivat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Butik\ButikSkiduthyrning.resx">
+      <DependentUpon>ButikSkiduthyrning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Butik\Butiksregister.resx">
+      <DependentUpon>Butiksregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Butik\ButikÅterlämning.resx">
+      <DependentUpon>ButikÅterlämning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FakturaFörKöp.resx">
+      <DependentUpon>FakturaFörKöp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FakturaFörLogi.resx">
+      <DependentUpon>FakturaFörLogi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fakturaregister.resx">
+      <DependentUpon>Fakturaregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boka\frmBokning.resx">
+      <DependentUpon>frmBokning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Butik\frmButikMeny.resx">
+      <DependentUpon>frmButikMeny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGodkännaPreBokningar.resx">
+      <DependentUpon>frmGodkännaPreBokningar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGruppSkidlektion-v2.resx">
+      <DependentUpon>frmGruppSkidlektion-v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHyrpris_2.resx">
+      <DependentUpon>frmHyrpris_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKonferensPris_2.resx">
+      <DependentUpon>frmKonferensPris_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin_2.resx">
+      <DependentUpon>frmLogin_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysAdmin\frmUppdateraPrivatRabatt.resx">
+      <DependentUpon>frmUppdateraPrivatRabatt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarknadsChef\frmLogipris_2.resx">
+      <DependentUpon>frmLogipris_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarknadsChef\frmMarknadsmeny.resx">
+      <DependentUpon>frmMarknadsmeny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skidskola\frmSkidlärare.resx">
+      <DependentUpon>frmSkidlärare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysAdmin\frmSysadminLäggTillPersonal.resx">
+      <DependentUpon>frmSysadminLäggTillPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysAdmin\frmSysadminMeny.resx">
+      <DependentUpon>frmSysadminMeny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysAdmin\frmSysadminpersonal.resx">
+      <DependentUpon>frmSysadminpersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hyrutrustningslista.resx">
+      <DependentUpon>Hyrutrustningslista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konferenslista.resx">
+      <DependentUpon>Konferenslista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kundregister.resx">
+      <DependentUpon>Kundregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logilista.resx">
+      <DependentUpon>Logilista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarknadsChef\LäggTillKundFöretag.resx">
+      <DependentUpon>LäggTillKundFöretag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarknadsChef\LäggTillKundPrivat.resx">
+      <DependentUpon>LäggTillKundPrivat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarknadsChef\Prislistor.resx">
+      <DependentUpon>Prislistor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preliminärbokningar.resx">
+      <DependentUpon>Preliminärbokningar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MarknadsChef\UppdateraKundFöretag.resx">
+      <DependentUpon>UppdateraKundFöretag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarknadsChef\UppdateraKundPrivat.resx">
+      <DependentUpon>UppdateraKundPrivat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uthyrningsregister.resx">
+      <DependentUpon>Uthyrningsregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <Fakes Include="Fakes\ExcelMapper.fakes" />
+    <Fakes Include="Fakes\BouncyCastle.Crypto.fakes" />
+    <Fakes Include="Fakes\BouncyCastle.Crypto01.fakes" />
+    <Fakes Include="Fakes\itextsharp.fakes" />
+    <Fakes Include="Fakes\NPOI.fakes" />
+    <Fakes Include="Fakes\Microsoft.AspNet.Identity.EntityFramework.fakes" />
+    <Fakes Include="Fakes\EntityFramework.fakes" />
+    <Fakes Include="Fakes\DataLayer_FrameWork.fakes" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="suht2009DataSet.xsc">
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="suht2009DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suht2009DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suht2009DataSet.xss">
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessEntities_FrameWork\BusinessEntities_FrameWork\BusinessEntities_FrameWork.csproj">
+      <Project>{e99d0d2a-bcbb-48aa-9f2b-eb62db609777}</Project>
+      <Name>BusinessEntities_FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessLayer_FrameWork\BusinessLayer_FrameWork.csproj">
+      <Project>{7b1a2b54-488a-4bef-9f6f-c9d8282a627a}</Project>
+      <Name>BusinessLayer_FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer_FrameWork\DataLayer_FrameWork.csproj">
+      <Project>{1BB0D322-AFA2-43D4-B647-1820370A9A96}</Project>
+      <Name>DataLayer_FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GUI_FrameWork\GUI_FrameWork.csproj">
+      <Project>{492ED7A8-5F66-46F5-9C7E-C6DDF16C1D2C}</Project>
+      <Name>GUI_FrameWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

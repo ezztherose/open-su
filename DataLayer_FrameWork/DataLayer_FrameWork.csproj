@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BB0D322-AFA2-43D4-B647-1820370A9A96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataLayer_FrameWork</RootNamespace>
+    <AssemblyName>DataLayer_FrameWork</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\DatabaseContext.cs" />
+    <Compile Include="Interfaces\IBokningsregisterRepository.cs" />
+    <Compile Include="Interfaces\IButiksregisterRepository.cs" />
+    <Compile Include="Interfaces\IFakturaregisterRepository.cs" />
+    <Compile Include="Interfaces\IGruppskidlektionRepository.cs" />
+    <Compile Include="Interfaces\IAnställdRepository.cs" />
+    <Compile Include="Interfaces\IBokningRepository.cs" />
+    <Compile Include="Interfaces\IBokningSkidLektionRepository.cs" />
+    <Compile Include="Interfaces\IDeltagareRepository.cs" />
+    <Compile Include="Interfaces\IFakturaRepository.cs" />
+    <Compile Include="Interfaces\IFöretagsKundRepository.cs" />
+    <Compile Include="Interfaces\IGenericRepository.cs" />
+    <Compile Include="Interfaces\IHyrPrisRepository.cs" />
+    <Compile Include="Interfaces\IKonferensPrisRepository.cs" />
+    <Compile Include="Interfaces\IKonferensRepository.cs" />
+    <Compile Include="Interfaces\IKundregisterRepository.cs" />
+    <Compile Include="Interfaces\ILogiPrisRepository.cs" />
+    <Compile Include="Interfaces\ILogiRepository.cs" />
+    <Compile Include="Interfaces\IMarknadsChefRepository.cs" />
+    <Compile Include="Interfaces\IPreBokningRepository.cs" />
+    <Compile Include="Interfaces\IPrivatKundRepository.cs" />
+    <Compile Include="Interfaces\ISkidLektionRepository.cs" />
+    <Compile Include="Interfaces\ISysAdminRepository.cs" />
+    <Compile Include="Interfaces\ITempKundRepository.cs" />
+    <Compile Include="Interfaces\IUthyrningRepository.cs" />
+    <Compile Include="Interfaces\IUthyrningsregisterRepository.cs" />
+    <Compile Include="Interfaces\IUtrustningRepository.cs" />
+    <Compile Include="Interfaces\IPrivatLektionRepository.cs" />
+    <Compile Include="Models\AnställdRepository.cs" />
+    <Compile Include="Models\BokningRepository.cs" />
+    <Compile Include="Models\BokningSkidLektionRepository.cs" />
+    <Compile Include="Models\BokningsregisterRepository.cs" />
+    <Compile Include="Models\ButiksregisterRepository.cs" />
+    <Compile Include="Models\DeltagareRepository.cs" />
+    <Compile Include="Models\FakturaregisterRepository.cs" />
+    <Compile Include="Models\FakturaRepository.cs" />
+    <Compile Include="Models\FöretagsKundRepository.cs" />
+    <Compile Include="Models\GenericRepository.cs" />
+    <Compile Include="Models\GruppskidlektionRepository.cs" />
+    <Compile Include="Models\HyrPrisRepository.cs" />
+    <Compile Include="Models\KonferensPrisRepository.cs" />
+    <Compile Include="Models\KonferensRepository.cs" />
+    <Compile Include="Models\KundregisterRepository.cs" />
+    <Compile Include="Models\LogiPrisRepository.cs" />
+    <Compile Include="Models\LogiRepository.cs" />
+    <Compile Include="Models\MarknadsChefRepository.cs" />
+    <Compile Include="Models\PreBokningRepository.cs" />
+    <Compile Include="Models\PrivatKundRepository.cs" />
+    <Compile Include="Models\PrivatLektionRepository.cs" />
+    <Compile Include="Models\SkidLektionRepository.cs" />
+    <Compile Include="Models\SysAdminRepository.cs" />
+    <Compile Include="Models\TempKundRepository.cs" />
+    <Compile Include="Models\UthyrningRepository.cs" />
+    <Compile Include="Models\UthyrningsregisterRepository.cs" />
+    <Compile Include="Models\UtrustningRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessEntities_FrameWork\BusinessEntities_FrameWork\BusinessEntities_FrameWork.csproj">
+      <Project>{e99d0d2a-bcbb-48aa-9f2b-eb62db609777}</Project>
+      <Name>BusinessEntities_FrameWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

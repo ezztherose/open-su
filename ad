@@ -1,0 +1,251 @@
+[33mcommit d3fa40c1ae91d1d3ba7e8823cffc4b7718f44334[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Mon Sep 28 15:40:41 2020 +0200
+
+    test av context?
+
+[33mcommit 07e7cf271f3bd8b42c2bad1ebd450813c79d36e0[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Mon Sep 28 12:06:24 2020 +0200
+
+    fixar
+
+[33mcommit 9a042f8f620adb58c91d56f9c2342b244a053edc[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Mon Sep 28 11:26:29 2020 +0200
+
+    added singelton
+
+[33mcommit 07d443c75bd5062faf844761949a61bd5e948947[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Thu Sep 24 22:11:06 2020 +0200
+
+    Adding last changes for today
+
+[33mcommit 27006730053f7522f5520a464dadc618d8e0ae2a[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Thu Sep 24 14:32:17 2020 +0200
+
+    fixar med nyckalr mellan tabeller
+
+[33mcommit a1f457ff6ef6fe964dd89254d8998483ca15df44[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Thu Sep 24 14:07:35 2020 +0200
+
+    img ark
+
+[33mcommit d22832d00c0b9c99649d86c13af0ee50e8e04c03[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Wed Sep 23 17:36:36 2020 +0200
+
+    ?
+
+[33mcommit 70960fdd296cdff565e633d60b718a487a8dd63e[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Wed Sep 23 17:35:46 2020 +0200
+
+    facade?
+
+[33mcommit cdf7304f20c202cced9baaf05350398be649682b[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Wed Sep 23 17:28:25 2020 +0200
+
+    Borttagning av arv för person
+
+[33mcommit 94c4041ed020dd4903f508c5fffebbff4ff7a0c5[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Tue Sep 22 19:17:51 2020 +0200
+
+    adding something?
+
+[33mcommit 5c385dad8cd645b73165b2e3582c8fd081438e92[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Tue Sep 22 13:30:24 2020 +0200
+
+    ?
+
+[33mcommit ea6f7de78c784a05d65b27bd75e7d06ef46e0a82[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Tue Sep 22 11:28:43 2020 +0200
+
+    lägger till arv och mer skti till datalagret
+
+[33mcommit 2f0a4094c503039a3c3dfc60236548a5461aab37[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Mon Sep 21 15:03:33 2020 +0200
+
+    fixa unitofwork
+
+[33mcommit 29d25b4bd567baeb40d3e2bc2b53b891f87c5b9b[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Fri Sep 18 22:12:49 2020 +0200
+
+    adding repos to unitofwork
+
+[33mcommit 0f73f908ca2435b2b92880dd08e9286f61c9d147[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Fri Sep 18 22:00:15 2020 +0200
+
+    adding repo models
+
+[33mcommit 6d798bdf93d18a25e4c1e8af1de2c7aecf1dc97f[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Fri Sep 18 21:39:59 2020 +0200
+
+    adding interface for repos
+
+[33mcommit a3326aec1862f62c79363eb9897837482e8839f3[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Fri Sep 18 21:28:03 2020 +0200
+
+    adding repos
+
+[33mcommit 6b015719f0f20f62553ecdc605fcee6ab046d344[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Fri Sep 18 21:18:26 2020 +0200
+
+    ?
+
+[33mcommit 8bf855309212109606ab837d2ed44069dcf759f8[m
+Author: Ezz <Ezztherose@gmail.com>
+Date:   Fri Sep 18 21:18:01 2020 +0200
+
+    UnitOfWork: lagt till kommentarer
+
+[33mcommit d39c92e74c4dc3f8367bd89d124a2982653ac0a4[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 17:29:29 2020 +0200
+
+    fix datalayer
+
+[33mcommit 9fd1e75eea27f23f1a700bd242f415ae2d8aa53b[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 17:29:03 2020 +0200
+
+    fix datalayer
+
+[33mcommit b97c348c1bc115062765b18f1934f2d4856d9641[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 17:13:56 2020 +0200
+
+    lagt till alla modeller igen
+
+[33mcommit 5ce23ec062880645a0cc29246f8f621012dc3cba[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 17:07:18 2020 +0200
+
+    modeller
+
+[33mcommit 4152c7b3c8a5fb92c333846288f167d23608ba9f[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 16:58:11 2020 +0200
+
+    tillägg av gui
+
+[33mcommit ac23e5dfd23eacf82851bec0246312343c720af8[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 14:25:38 2020 +0200
+
+    basic modeller
+
+[33mcommit 624667a034018420d1296766abe0677844da4b61[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 14:23:48 2020 +0200
+
+    basic modeller
+
+[33mcommit 1218913427efc8c94773118416ae923f60f7d79a[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 14:13:16 2020 +0200
+
+    nästan alla modeller för databasen
+
+[33mcommit 2c52fc5feb8ff3c480f3795b5aa994ff7e6f5ea1[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 13:48:12 2020 +0200
+
+    interface till mall
+
+[33mcommit 2a95fa88a0cbfe50d0d3d7b8f72e01780ef520f9[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 12:01:00 2020 +0200
+
+    fixar med tabeller/klasser med EF
+
+[33mcommit 29954972afe9c0094795c90a7972c1a3113fa290[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 18 11:21:29 2020 +0200
+
+    mer ramverk
+
+[33mcommit bfd3ba312268eea5e192a31b1a6258a4449120f9[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Thu Sep 17 14:58:41 2020 +0200
+
+    Länkar för branches
+
+[33mcommit 7cca70d3de907d0d79b24070ee51d042f0074b79[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Thu Sep 17 14:56:37 2020 +0200
+
+    hittad länk för github i vs studio
+
+[33mcommit ac27a5a4dff4241c34f0ab69f6d5f4a13baf3ea1[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Thu Sep 17 14:38:12 2020 +0200
+
+    hittad länk för forking på github
+
+[33mcommit b93d79baf1dce6d2f2685ea2b2bd0add140ca830[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Thu Sep 17 13:52:54 2020 +0200
+
+    kollar för ersättning för calibur micro
+
+[33mcommit 49eed120b49c8fb0a3393b05c17cbac10eeb0d60[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 11 19:38:47 2020 +0200
+
+    sista grundläggande fix
+
+[33mcommit dc881207f801f0df5543c41ce94367368d3f9b8d[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 11 13:19:35 2020 +0200
+
+    fixar med kod
+
+[33mcommit aa487a27bbf7cc1d35013ea7161c1c1320c1494a[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 11 13:03:29 2020 +0200
+
+    fixar med kod
+
+[33mcommit 99c9c431fb4eaba76e2823ae5c4605c027c86e5b[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 11 12:50:52 2020 +0200
+
+    Setting up repo
+
+[33mcommit 423a572b118eb903406257b488de4969b00dd074[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 11 12:29:12 2020 +0200
+
+    new repo
+
+[33mcommit 9701b0d3da1279d03093b90b0c1a3a6e9029b76b[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 11 12:22:29 2020 +0200
+
+    new repo
+
+[33mcommit cf22b70d693e24e96afc5bbc9007156e41f1a080[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 11 12:14:58 2020 +0200
+
+    new repo
+
+[33mcommit daa612037d86babb457d4b2d385f28aad0119f99[m
+Author: EzzTheRose <EzzTheRose@gmail.com>
+Date:   Fri Sep 11 12:13:09 2020 +0200
+
+    new repo
