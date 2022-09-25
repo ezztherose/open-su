@@ -1,78 +1,81 @@
+# NOTE! 
+**This project will not work when you download. It has a few component files removed for security reason**
+
 # SU-Projekt
 
-## Inlogg för olika användare
+## Inlogg fÃ¶r olika anvÃ¤ndare
 #### Reception
-- användarnamn: jacob
-- lösenord: jacob
+- anvÃ¤ndarnamn: jacob
+- lÃ¶senord: jacob
 
 #### Butik
-- användarnamn: Tommy
-- lösenord: tommy
+- anvÃ¤ndarnamn: Tommy
+- lÃ¶senord: tommy
 
 #### Skidskola
-- användarnamn: admin
-- lösenord: admin
+- anvÃ¤ndarnamn: admin
+- lÃ¶senord: admin
 
-#### Skidlärare
-- användarnamn: emmy
-- lösenord: emmy
+#### SkidlÃ¤rare
+- anvÃ¤ndarnamn: emmy
+- lÃ¶senord: emmy
 
-## Hur man jobbar med "Fork" på GitHub
+## Hur man jobbar med "Fork" pÃ¥ GitHub
 - Hur fork fungerar: https://www.youtube.com/watch?v=HbSjyU2vf6Y
 - Hur Github fungerar i Visual Studio: https://www.youtube.com/watch?v=jUiuIAZt6Dw
 - Hur branches fungerar: https://www.youtube.com/watch?v=QV0kVNvkMxc
-- ihopsättning av branches: https://www.youtube.com/watch?v=XX-Kct0PfFc
+- ihopsÃ¤ttning av branches: https://www.youtube.com/watch?v=XX-Kct0PfFc
 
-## Överblick på struktur
-![överblic](Doc/Överblick.png)
+## Ã–verblick pÃ¥ struktur
+![Ã¶verblic](Doc/Ã–verblick.png)
 
-## För att få ladda upp kod på GitHub
-1. Ta ner existerande kod från GitHub
-2. Koden som du själv skriver måste fungera.
+## FÃ¶r att fÃ¥ ladda upp kod pÃ¥ GitHub
+1. Ta ner existerande kod frÃ¥n GitHub
+2. Koden som du sjÃ¤lv skriver mÃ¥ste fungera.
 3. Pusha upp den nya koden. Skriv kommentar om vad som har gjorts.
 
 ## Standard: Notation
 ### Arv
-- När man skall ärva från en klass, ärv från dess Interface istället för klassen.
+- NÃ¤r man skall Ã¤rva frÃ¥n en klass, Ã¤rv frÃ¥n dess Interface istÃ¤llet fÃ¶r klassen.
 
 ### Classer och interfaces
-Classer skall börja med versal följt av kamelnotation
+Classer skall bÃ¶rja med versal fÃ¶ljt av kamelnotation
 ```
 GenericRepository
 ```
 
-Interfaces skall börja "I" följt av classens namn, där första tecekn skall vara versal följt av kamelnotation
+Interfaces skall bÃ¶rja "I" fÃ¶ljt av classens namn, dÃ¤r fÃ¶rsta tecekn skall vara versal fÃ¶ljt av kamelnotation
 ```
 IGenericRepository
 ```
 
 ### Funktioner & Variabler
-Funktioner börjar med versal och följer sedan kamelnotationen. 
+Funktioner bÃ¶rjar med versal och fÃ¶ljer sedan kamelnotationen. 
 - AddKund()
 
-Variabler kommer att se olika ut beroende på om de är **public** eller **private**.
-- Public: börjar med små bokstäver och följer sedan kamelnotation. 
+Variabler kommer att se olika ut beroende pÃ¥ om de Ã¤r **public** eller **private**.
+- Public: bÃ¶rjar med smÃ¥ bokstÃ¤ver och fÃ¶ljer sedan kamelnotation. 
 ```
 public string lastName
 ```
 
-- Private: börjar med "_", sedan liten bokstav och efter det följer den kamelnotation. 
+- Private: bÃ¶rjar med "_", sedan liten bokstav och efter det fÃ¶ljer den kamelnotation. 
 ```
 private string _lastName
 ```
 
 ### Objekt i GUI
-Kommer att använda kamelnotation under arbetets gång med en förkortning av det objekt man skall använda framför.
-- TextBox: tb. Kommer att se följande ut: tbFaktura.
-- Label: lbl. Kommer att se följande ut: lblFakturor.
-- Forms: frm. Kommer att se följande ut: frmAdmin.
-- Buttons: btn. Kommer att se följande ut: btnSpara.
-- GridView: gv. Kommer att se följande ut: gvKund.
+Kommer att anvÃ¤nda kamelnotation under arbetets gÃ¥ng med en fÃ¶rkortning av det objekt man skall anvÃ¤nda framfÃ¶r.
+- TextBox: tb. Kommer att se fÃ¶ljande ut: tbFaktura.
+- Label: lbl. Kommer att se fÃ¶ljande ut: lblFakturor.
+- Forms: frm. Kommer att se fÃ¶ljande ut: frmAdmin.
+- Buttons: btn. Kommer att se fÃ¶ljande ut: btnSpara.
+- GridView: gv. Kommer att se fÃ¶ljande ut: gvKund.
 
 ## Skicka med vin inloggning
-- en textfil med inloggningsuppgifter för de olika rollerna
+- en textfil med inloggningsuppgifter fÃ¶r de olika rollerna
 
-## Ersättning för caluburn micro
+## ErsÃ¤ttning fÃ¶r caluburn micro
 **VI UNDVIKER WPF**
 Alternativ:
 - MVVM Light: https://github.com/lbugnion/mvvmlight (1)
@@ -82,11 +85,11 @@ Alternativ:
 - ReactiveUI: https://github.com/reactiveui/ReactiveUI (5)
 - MvvmCross: https://www.mvvmcross.com/ (6)
 
-Vilken av dessa ska vi använda?
+Vilken av dessa ska vi anvÃ¤nda?
 
 ## GitHub WorkFlow - Terminal
 ### 1. Fetch
-Kontrollerar om det har kommit några nya "commits"
+Kontrollerar om det har kommit nÃ¥gra nya "commits"
 
 ### 2. Pull 
 Tar hem den senaste versionen
@@ -108,14 +111,14 @@ git checkout <branchName>
 ```
 
 ### 4. Kodning
-Utvecklar applikationen på sin egna lokala maskin.
+Utvecklar applikationen pÃ¥ sin egna lokala maskin.
 
-Kontrollera så att koden har kompilerats
+Kontrollera sÃ¥ att koden har kompilerats
 
 ### 5. Commit & Push
 Commit skapar en ny version och push trycker upp den till github
 
-Lägg till den nya koden/ändringar som skall läggas till
+LÃ¤gg till den nya koden/Ã¤ndringar som skall lÃ¤ggas till
 ```
 git add . (inte bra)
 git add "filnamn" (bra)
@@ -131,7 +134,7 @@ Skicka koden till GitHub
 git push origing "but ut till branch"
 ```
 
-## För GitHub
+## FÃ¶r GitHub
 1. stash (sitt egna projekt)
-2. pull från master
+2. pull frÃ¥n master
 3. commit stash (viktigt med kommentar)
