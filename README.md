@@ -1,4 +1,7 @@
 # NOTE! 
+
+This project is NOT actively been worked on!
+
 **This project will not work when you download. It has a few component files removed for security reason**
 
 
