@@ -1,6 +1,11 @@
 # NOTE! 
 **This project will not work when you download. It has a few component files removed for security reason**
 
+
+To summarize this project. We made a CRUD-application, this app had to talk to a database. The connection is MS own Entity Framework (EF) This application was splitted up into three layers (Data-layer, Business-layer, and GUI-layer). This was done to make sure that each layer only does what it is supposed to do.
+
+![överblic](Doc/Överblick.png)
+
 # SU-Projekt
 
 ## Inlogg för olika användare
